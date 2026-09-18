@@ -25,19 +25,6 @@ df = df.sort_values(["source_uuid", "toa"])
 # Calculate DTOA within each individual source
 df["dtoa"] = (df.groupby("source_uuid")["toa"].diff())
 
-#print(df.groupby("source_uuid")[["toa", "pulse_width", "frequency", "dtoa"]].describe())
-
-# How many distinct values?
-#print("\nUnique frequencies:", df["frequency"].nunique())
-#print("Unique pulse widths:", df["pulse_width"].nunique())
-#print("Unique bandwidths:", df["bandwidth"].nunique())
-
-#print("\nFrequency counts:")
-#print(df["frequency"].value_counts().sort_index())
-
-#print("\nPulse-width counts:")
-#print(df["pulse_width"].value_counts().sort_index())
-
 fig, ax = plt.subplots(figsize=(12, 6))
 
 for source, group in df.groupby("source_uuid"):
