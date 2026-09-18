@@ -1,0 +1,17 @@
+# Downloaded SRC datasets and archives
+data/
+downloads/
+
+# Accidental root-owned dataset copy
+easy_final_v1-0.root-copy/
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
